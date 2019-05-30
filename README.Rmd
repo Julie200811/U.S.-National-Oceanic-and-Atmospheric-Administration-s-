@@ -1,0 +1,25 @@
+The U.S. National Oceanic and Atmospheric Administration's (NOAA) Storm Database
+========================================================
+## Intoroduction
+The NOAA database tracks characteristics of major storms and weather events in the United States, including when and where they occur, as well as estimates of any fatalities, injuries, and property damage. In this project we explore the NOAA Storm Database and answer a few basic questions about severe weather events. In particular, we are interested in the following: which types of events are most harmful with respect to population health across the United States, and which types of events have the greatest economic consequences across the United States. We find that, over the period from 1993 through 2011, extreme temperature events resulted in the most fatalities, Illinois being the state that suffered the most (998 fatalities). Texas suffered from the greatest number of flood events, resulting in the most number of injuries (6,951). The state of California suffered the most property damages, mainly from flood events ($117.4 billion).
+
+### *Note:* The short published (at RPubs) summary is availble [here] (http://rpubs.com/davidd/NOAA_short). 
+
+## Analysis
+
+The scripts found in this repo perform the following tasks (see individual scripts for more info):
+- `download_and_read_storm_data.R` downloads the Storm database and reads it into `R`. (The file 49 Mb zipped, so it takes a few minutes to download.
+- `reduce_dataset_and_save.R` reduces the dataset to only those observations that are of interest for this project
+- `property_and_crop_damages.R` computes damage amounts 
+- `analysis.R` contains the main analysis. In particular, code that reduces the large number of storm event categories (initially 985) down to just 5: `Convection`, `Extreme Temperatures`, `Flood`, `Winter`, and ` Other`.
+- `Results.R` computes fatalities and injuries resulting from the weather events. And also plots the results.
+Acknowledgments:
+* The rationale for selecting these 5 categories was drawn [from here] (http://www.ncdc.noaa.gov/oa/climate/sd/annsum2009.pdf). And the ideas and methods on how to do this using regular expressions were gleaned from various sources, including the discussion forums at `stackoverflow` and coursera's discussion forums ([e.g.this](https://class.coursera.org/repdata-002/forum/thread?thread_id=32) or [this](https://class.coursera.org/repdata-002/forum/thread?thread_id=46)).
+
+
+
+## Results
+
+Please see the summary of the results at [RPubs] (http://rpubs.com/davidd/NOAA_short).
+
+The version that contains *full code* to replicate the results can also be found [here] (http://rpubs.com/davidd/NOAA_full_code)
