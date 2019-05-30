@@ -18,8 +18,4 @@ Acknowledgments:
 
 
 
-## Results
 
-Please see the summary of the results at [RPubs] (http://rpubs.com/davidd/NOAA_short).
-
-The version that contains *full code* to replicate the results can also be found [here] (http://rpubs.com/davidd/NOAA_full_code)
