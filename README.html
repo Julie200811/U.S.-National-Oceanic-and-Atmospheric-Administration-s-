@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>The U.S. National Oceanic and Atmospheric Administration&#39;s (NOAA) Storm Database</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+h1 { 
+   font-size:2.2em; 
+}
+h2 { 
+   font-size:1.8em; 
+}
+h3 { 
+   font-size:1.4em; 
+}
+h4 { 
+   font-size:1.0em; 
+}
+h5 { 
+   font-size:0.9em; 
+}
+h6 { 
+   font-size:0.8em; 
+}
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+table, td, th {
+  border: none;
+}
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+   img { 
+      max-width: 100% !important; 
+   }
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>The U.S. National Oceanic and Atmospheric Administration&#39;s (NOAA) Storm Database</h1>
+
+<h2>Intoroduction</h2>
+
+<p>The NOAA database tracks characteristics of major storms and weather events in the United States, including when and where they occur, as well as estimates of any fatalities, injuries, and property damage. In this project we explore the NOAA Storm Database and answer a few basic questions about severe weather events. In particular, we are interested in the following: which types of events are most harmful with respect to population health across the United States, and which types of events have the greatest economic consequences across the United States. We find that, over the period from 1993 through 2011, extreme temperature events resulted in the most fatalities, Illinois being the state that suffered the most (998 fatalities). Texas suffered from the greatest number of flood events, resulting in the most number of injuries (6,951). The state of California suffered the most property damages, mainly from flood events ($117.4 billion).</p>
+
+<h3><em>Note:</em> The short published (at RPubs) summary is availble <a href="http://rpubs.com/davidd/NOAA_short">here</a>.</h3>
+
+<h2>Analysis</h2>
+
+<p>The scripts found in this repo perform the following tasks (see individual scripts for more info):</p>
+
+<ul>
+<li><code>download_and_read_storm_data.R</code> downloads the Storm database and reads it into <code>R</code>. (The file 49 Mb zipped, so it takes a few minutes to download.</li>
+<li><code>reduce_dataset_and_save.R</code> reduces the dataset to only those observations that are of interest for this project</li>
+<li><code>property_and_crop_damages.R</code> computes damage amounts </li>
+<li><code>analysis.R</code> contains the main analysis. In particular, code that reduces the large number of storm event categories (initially 985) down to just 5: <code>Convection</code>, <code>Extreme Temperatures</code>, <code>Flood</code>, <code>Winter</code>, and <code>Other</code>.</li>
+<li><code>Results.R</code> computes fatalities and injuries resulting from the weather events. And also plots the results.
+Acknowledgments:</li>
+<li>The rationale for selecting these 5 categories was drawn <a href="http://www.ncdc.noaa.gov/oa/climate/sd/annsum2009.pdf">from here</a>. And the ideas and methods on how to do this using regular expressions were gleaned from various sources, including the discussion forums at <code>stackoverflow</code> and coursera&#39;s discussion forums (<a href="https://class.coursera.org/repdata-002/forum/thread?thread_id=32">e.g.this</a> or <a href="https://class.coursera.org/repdata-002/forum/thread?thread_id=46">this</a>).</li>
+</ul>
+
+<h2>Results</h2>
+
+<p>Please see the summary of the results at <a href="http://rpubs.com/davidd/NOAA_short">RPubs</a>.</p>
+
+<p>The version that contains <em>full code</em> to replicate the results can also be found <a href="http://rpubs.com/davidd/NOAA_full_code">here</a></p>
+
+</body>
+
+</html>
